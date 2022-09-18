@@ -1,0 +1,60 @@
+\documentclass[a4paper,11pt]{jsarticle}
+
+
+% 数式
+\usepackage{amsmath,amsfonts}
+\usepackage{bm}
+% 画像
+\usepackage[dvipdfmx]{graphicx}
+
+
+\begin{document}
+
+\title{工業力学-演習問題4.12}
+\author{Issaimaru}
+\date{\today}
+  \maketitle
+
+  4.12 物体を同じ初速度の大きさ$v_{0}$で投げるとき，水平到達距離を最大にするためには，水平面に対してどの方向に投げればよいかを求めよ．
+  \\
+  \\
+  (解答)\\
+  まず，物体を投げてから経過した時間をt[s]とするとx方向の移動速度は，物体を投げる角度$\theta$を用いて
+  \begin{equation}
+    v_{x}=v_{0}\cos{\theta}
+  \end{equation}
+  であるから，x方向の変位はこれを0からtまでの定積分してやれば求まるので
+  \begin{equation}
+    x=\int_{0}^{t}v_{x}=v_{0}t\cos{\theta}
+  \end{equation}
+  同様に，y方向の移動速度は
+  \begin{equation}
+    v_{y}=v_{0}\sin{\theta}-gt
+  \end{equation}
+  であるから，y方向の変位は
+  \begin{equation}
+    y=\int_{0}^{t}v_{y}=v_{0}t\sin{\theta}-\frac{1}{2}gt^2
+  \end{equation}
+  と求めることができる．\\
+  ここで，地面に到達するときのy方向の変位は0になるはずであるから，
+  \begin{equation}
+    v_{0}t\sin{\theta}-\frac{1}{2}gt^2=0
+  \end{equation}
+  となるときのtが投げた物体が地面に落ちるまでの時間である(t=0は投げる瞬間なので駄目)\\
+  これを解くと，
+  \begin{equation}
+    t=\frac{2v_{0}\sin{\theta}}{g}
+  \end{equation}
+  となるから，これを(2)式のtに代入して
+  \begin{equation}
+    x=\frac{2v_{0}^2}{g}\sin{\theta}\cos{\theta}
+  \end{equation}
+  という式が得られる．\\
+  求めたかったのはこのxが最大となるときの$\theta$であるが，(7)式の変数が$\sin{\theta}cos{\theta}$しかないことから，これが最大となるときの$\theta$を求めればよい．\\
+  \begin{equation}
+    \sin{\theta}cos{\theta}=\frac{sin{2\theta}}{2}
+  \end{equation}
+  であり，$\frac{sin{2\theta}}{2}$の最大値は1であるからこれが1になる$\theta$を見つけてやると$\theta=\frac{\pi}{4}$のときであるから，これが答えとなる．
+
+
+\end{document}
